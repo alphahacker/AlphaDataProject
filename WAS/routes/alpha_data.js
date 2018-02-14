@@ -24,11 +24,12 @@ var app = express();
 
 //---------------------------------------------------------------------------//
 
-router.get('/template', function(req, res, next) {
+router.get('/index', function(req, res, next) {
+  res.render('alphadata_index');
   //template 이라는 URI로 왔을때, temp라고하는 템플릿 파일을 이용해서 렌더링 한다는 의미.
-  res.render('temp', {time: 'hello', _title: 'Alphahacker'});
-  //res.render('temp', {time: Date()});
-  //res.render('temp', {time: 'hello'});
+    //res.render('temp', {time: 'hello', _title: 'Alphahacker'});
+    //res.render('temp', {time: Date()});
+    //res.render('temp', {time: 'hello'});
 });
 
 module.exports = router;
